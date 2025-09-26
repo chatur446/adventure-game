@@ -8,82 +8,82 @@ The game uses a "choose your own adventure" style where the player types command
 
 ✨ Features
 
-Built with Flask (lightweight Python web framework).
+- Built with Flask (lightweight Python web framework).
 
-Playable directly in the browser (no extra software needed).
+- Playable directly in the browser (no extra software needed).
 
-Branching story paths with multiple endings.
+- Branching story paths with multiple endings.
 
-Health (HP) system → player starts with 100 HP, can lose or gain HP.
+- Health (HP) system → player starts with 100 HP, can lose or gain HP.
 
-Score system → earn points for defeating enemies and finding treasure.
+- Score system → earn points for defeating enemies and finding treasure.
 
-Replay option → restart and try different choices.
+- Replay option → restart and try different choices.
 
-Clean retro console-style UI (green text on black background).
+- Clean retro console-style UI (green text on black background).
 
 ⚔️ Gameplay Example
 
-Start:
+1. Start:
 
-You wake up in a dark cave. A dragon blocks the exit! 🐉
-Choices: fight, run
-
-
-If player chooses fight:
-
-You draw your sword and fight! ⚔️ The dragon breathes fire...
-Choices: attack, defend
+   You wake up in a dark cave. A dragon blocks the exit! 🐉
+   Choices: fight, run
 
 
-If player chooses attack:
-🎉 You slay the dragon, lose 20 HP, but gain 100 Score!
+2. If player chooses fight:
 
-If player chooses open chest:
-💰 You find treasure and win the game!
+   You draw your sword and fight! ⚔️ The dragon breathes fire...
+   Choices: attack, defend
+
+
+3. If player chooses attack:
+   🎉 You slay the dragon, lose 20 HP, but gain 100 Score!
+
+4. If player chooses open chest:
+  💰 You find treasure and win the game!
 
 🛠️ Tech Stack
 
-Python 3
+- Python 3
 
-Flask (web framework)
+- Flask (web framework)
 
-HTML/CSS (inline, for styling)
+- HTML/CSS (inline, for styling)
 
 🚀 How to Run Locally
 
-Clone the repo:
+1. Clone the repo:
 
 git clone https://github.com/YOUR-USERNAME/adventure-game.git
 cd adventure-game
 
 
-(Optional) Create a virtual environment:
+2. (Optional) Create a virtual environment:
 
 python -m venv venv
 venv\Scripts\activate   # Windows
 source venv/bin/activate   # Mac/Linux
 
 
-Install dependencies:
+3. Install dependencies:
 
 pip install flask
 
 
-Run the game:
+4. Run the game:
 
 python app.py
 
 
-Open your browser at:
+5. Open your browser at:
 👉 http://127.0.0.1:5000
 
 🔮 Future Improvements
 
-Add random events (enemy ambush, traps, bonus HP).
+- Add random events (enemy ambush, traps, bonus HP).
 
-More story paths and endings.
+- More story paths and endings.
 
-Inventory system (collect weapons or items).
+- Inventory system (collect weapons or items).
 
-Deploy online (Render/Heroku) so anyone can play via URL.
+- Deploy online (Render/Heroku) so anyone can play via URL.
