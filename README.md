@@ -53,10 +53,9 @@ The game uses a "choose your own adventure" style where the player types command
 🚀 How to Run Locally
 
 1. Clone the repo:
-
+'''bash
    git clone https://github.com/YOUR-USERNAME/adventure-game.git
-   cd adventure-game
-
+   cd adventure-game'''
 
 2. (Optional) Create a virtual environment:
 
