@@ -54,29 +54,29 @@ The game uses a "choose your own adventure" style where the player types command
 
 1. Clone the repo:
 
-git clone https://github.com/YOUR-USERNAME/adventure-game.git
-cd adventure-game
+   git clone https://github.com/YOUR-USERNAME/adventure-game.git
+   cd adventure-game
 
 
 2. (Optional) Create a virtual environment:
 
-python -m venv venv
-venv\Scripts\activate   # Windows
-source venv/bin/activate   # Mac/Linux
+   python -m venv venv
+   venv\Scripts\activate   # Windows
+   source venv/bin/activate   # Mac/Linux
 
 
 3. Install dependencies:
 
-pip install flask
+   pip install flask
 
 
 4. Run the game:
 
-python app.py
+   python app.py
 
 
 5. Open your browser at:
-👉 http://127.0.0.1:5000
+   👉 http://127.0.0.1:5000
 
 🔮 Future Improvements
 
