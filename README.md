@@ -1,12 +1,12 @@
 # 🕹 Adventure RPG Game (Python + Flask)
-📌 Project Overview
+📌 **Project Overview**
 
 This project is a console-style text adventure game built with **Python (Flask framework)** that runs in the browser.
 The player explores a branching storyline inside a dark cave, facing challenges like fighting dragons 🐉, discovering treasures 💎, and making survival choices.
 
 The game uses a "choose your own adventure" style where the player types commands (fight, run, open, etc.) and the story unfolds based on those decisions.
 
-✨ Features
+✨ **Features**
 
 - Built with **Flask (lightweight Python web framework).**
 
@@ -22,7 +22,7 @@ The game uses a "choose your own adventure" style where the player types command
 
 - Clean retro console-style UI (green text on black background).
 
-⚔️ Gameplay Example
+⚔️ **Gameplay Example**
 
 1. Start:
 
@@ -42,15 +42,15 @@ The game uses a "choose your own adventure" style where the player types command
 4. If player chooses open chest:
   💰 You find treasure and win the game!
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 
-- Python 3
+- **Python 3**
 
-- Flask (web framework)
+- **Flask (web framework)**
 
-- HTML/CSS (inline, for styling)
+- **HTML/CSS (inline, for styling)**
 
-🚀 How to Run Locally
+🚀 **How to Run Locally**
 
 1. Clone the repo:
 2. ```bash
@@ -81,7 +81,7 @@ The game uses a "choose your own adventure" style where the player types command
    ```bash
    👉 <http://127.0.0.1:5000>
    ```
-🔮 Future Improvements
+🔮 **Future Improvements**
 
 - Add random events (enemy ambush, traps, bonus HP).
 
