@@ -6,7 +6,7 @@ The player explores a branching storyline inside a dark cave, facing challenges 
 
 The game uses a "choose your own adventure" style where the player types commands (fight, run, open, etc.) and the story unfolds based on those decisions.
 
-✨ Features
+# ✨ Features
 
 - Built with **Flask (lightweight Python web framework).**
 
