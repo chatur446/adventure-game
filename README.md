@@ -55,7 +55,7 @@ The game uses a "choose your own adventure" style where the player types command
 1. Clone the repo:
 2. ~~~
    bash
-   git clone https://github.com/YOUR-USERNAME/adventure-game.git
+   git clone <https://github.com/YOUR-USERNAME/adventure-game.git>
    cd adventure-game
 
 3. (Optional) Create a virtual environment:
@@ -80,7 +80,7 @@ The game uses a "choose your own adventure" style where the player types command
 
 6. Open your browser at:
    ~~~
-   👉 http://127.0.0.1:5000
+   👉 <http://127.0.0.1:5000>
 
 🔮 Future Improvements
 
