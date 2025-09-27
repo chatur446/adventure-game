@@ -1,14 +1,14 @@
-🕹 Adventure RPG Game (Python + Flask)
+# 🕹 Adventure RPG Game (Python + Flask)
 📌 Project Overview
 
-This project is a console-style text adventure game built with Python (Flask framework) that runs in the browser.
+This project is a console-style text adventure game built with **Python (Flask framework)** that runs in the browser.
 The player explores a branching storyline inside a dark cave, facing challenges like fighting dragons 🐉, discovering treasures 💎, and making survival choices.
 
 The game uses a "choose your own adventure" style where the player types commands (fight, run, open, etc.) and the story unfolds based on those decisions.
 
 ✨ Features
 
-- Built with Flask (lightweight Python web framework).
+- Built with **Flask (lightweight Python web framework).**
 
 - Playable directly in the browser (no extra software needed).
 
