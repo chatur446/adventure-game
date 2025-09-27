@@ -53,35 +53,34 @@ The game uses a "choose your own adventure" style where the player types command
 🚀 How to Run Locally
 
 1. Clone the repo:
-2. ~~~
-   bash
+2. ```bash
    git clone <https://github.com/YOUR-USERNAME/adventure-game.git>
    cd adventure-game
-
+   ```
 3. (Optional) Create a virtual environment:
 
-   ~~~
+   ```bash
    python -m venv venv
    venv\Scripts\activate   # Windows
    source venv/bin/activate   # Mac/Linux
-
+   ```
 
 4. Install dependencies:
 
-   ~~~
+   ```bash
    pip install flask
-
+   ```
 
 5. Run the game:
 
-   ~~~
+   ```bash
    python app.py
-
+   ```
 
 6. Open your browser at:
-   ~~~
+   ```bash
    👉 <http://127.0.0.1:5000>
-
+   ```
 🔮 Future Improvements
 
 - Add random events (enemy ambush, traps, bonus HP).
