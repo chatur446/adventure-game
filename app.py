@@ -51,30 +51,115 @@ page_template = """
 <html>
 <head>
     <title>Adventure RPG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        body { font-family: monospace; background: #111; color: #0f0; text-align: center; padding: 20px; }
-        .story { font-size: 20px; margin: 20px; }
-        input, button { padding: 8px; font-size: 16px; margin: 5px; }
-        .msg { margin: 20px; font-size: 18px; color: #ff0; }
-        .stats { margin: 10px; font-size: 18px; color: #0ff; }
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: #111;
+            color: #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .game-container {
+            width: 90%;
+            max-width: 800px;
+            background: #000;
+            border: 2px solid #0f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #0f0;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .stats {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #0ff;
+            text-shadow: 0 0 5px #0ff;
+        }
+        .story {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            min-height: 100px; /* Reserve space for text */
+        }
+        .choices-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        button {
+            font-family: 'Press Start 2P', cursive;
+            background: transparent;
+            border: 2px solid #f0f;
+            color: #f0f;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px #f0f;
+        }
+        button:hover {
+            background: #f0f;
+            color: #000;
+            box-shadow: 0 0 15px #f0f;
+        }
+        .msg {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff0;
+        }
     </style>
 </head>
 <body>
-    <h1>🕹 Adventure RPG</h1>
-    <div class="stats">❤️ HP: {{ hp }} | ⭐ Score: {{ score }}</div>
-    <div class="story">{{ text }}</div>
-    {% if choices %}
-        <form method="post">
-            <input type="text" name="choice" placeholder="Type your choice..." required>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="msg">Choices: {{ choices|join(", ") }}</div>
-    {% else %}
-        <div class="msg">The End 🎬</div>
-        <form method="post" action="/reset">
-            <button type="submit">Play Again</button>
-        </form>
-    {% endif %}
+    <div class="game-container">
+        <h1>🕹 Adventure RPG</h1>
+        <div class="stats">❤️ HP: {{ hp }} | ⭐ Score: {{ score }}</div>
+        <div class="story" id="story-text"></div>
+        
+        {% if choices %}
+            <div class="choices-container">
+                {% for choice in choices %}
+                <form method="post" style="display: inline;">
+                    <input type="hidden" name="choice" value="{{ choice }}">
+                    <button type="submit">{{ choice|capitalize }}</button>
+                </form>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="msg">The End 🎬</div>
+            <form method="post" action="/reset">
+                <button type="submit">Play Again</button>
+            </form>
+        {% endif %}
+    </div>
+
+    <script>
+        const storyTextElement = document.getElementById('story-text');
+        const fullText = `{{ text|safe }}`; // Get text from Flask, ensure it's safe
+        let i = 0;
+
+        function typeWriter() {
+            if (i < fullText.length) {
+                storyTextElement.innerHTML += fullText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50); // Adjust speed here (milliseconds)
+            }
+        }
+
+        // Start the effect when the page loads
+        window.onload = typeWriter;
+    </script>
 </body>
 </html>
 """
